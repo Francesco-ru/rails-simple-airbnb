@@ -1,0 +1,14 @@
+<div class='container'>
+  <h1><%= @flat.name %></h1>
+  <h4><%= @flat.address %></h4>
+  <p><%= @flat.description %></p>
+  <h3><%= @flat.price_per_night %></h3>
+  <%= link_to 'Edit the Flat', edit_flat_path(@flat) %> |
+  <%= link_to 'Delete Flat',
+    flat_path(@flat.id),
+    method: :delete,
+    data: { confirm: "Are you sure?"}
+  %>
+</div>
+
+
